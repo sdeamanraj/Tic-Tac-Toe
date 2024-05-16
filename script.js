@@ -69,6 +69,7 @@ function ifWin(){
         gameInfo.innerText = `Winner - ${ans}`;
         newGameBtn.classList.add("active");
         container.classList.add("disable-clicks");
+        return;
     }
     if(count === 9){
         gameInfo.innerText = `Game Tied`;
