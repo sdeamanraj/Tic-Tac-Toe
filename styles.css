@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 44%, rgba(238, 130, 238, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Player status */
+.game-info{
+    color: white;
+    position: absolute;
+    top: 2rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    cursor: default;
+}
+
+/* Game */
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.box1,.box2,.box4,.box5,.box7,.box8{
+    border-right: 2px solid white;
+}
+.box1,.box2,.box3,.box4,.box5,.box6{
+    border-bottom: 2px solid white;
+}
+/* Win */
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
+.disable-clicks {
+    pointer-events: none;
+}
+
+/* New Game */
+.btn{
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: 2rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+}
+.btn.active{
+    display: block;
+}
+.btn:hover{
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
